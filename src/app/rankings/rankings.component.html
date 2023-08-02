@@ -1,0 +1,22 @@
+<section class="rankings-section bg-light" id="ranking">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center">
+        <h4>Top 10 most populous countries of 2023</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3" *ngFor="let datum of data.slice(0, 10)">
+        <div class="card mb-4">
+          <img src="assets/img/flags/{{ datum['country'] }}.png" class="card-img-top" alt="{{ datum['country'] }} Flag" />
+          <div class="card-body">
+            <h5 class="card-title">
+              {{ datum["rank"] }} - {{ datum["country"] }}
+            </h5>
+            <p class="card-text">Population: {{ datum["pop2023"] }} millions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
