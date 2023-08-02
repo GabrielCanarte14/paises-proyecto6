@@ -10,18 +10,23 @@ import { MastheadComponent } from './masthead/masthead.component';
 import { AboutComponent } from './about/about.component';
 import { RankingsComponent } from './rankings/rankings.component';
 
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { ContactComponent } from './contact/contact.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     MastheadComponent,
     AboutComponent,
-    RankingsComponent
+    RankingsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CanvasJSAngularChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
