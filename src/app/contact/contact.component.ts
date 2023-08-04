@@ -23,8 +23,8 @@ export class ContactComponent {
 	}
 
 	generateCharts() {
-		const firstFiveData = this.data.slice(0, 5);
-		const countryarea = this.data.slice(10, 21);
+		const firstFiveData = this.data.slice(21, 31);
+		const countryarea = this.data.slice(10, 20);
 		this.chartOptions = {
 			animationEnabled: true,
 			theme: "dark2",
@@ -45,20 +45,11 @@ export class ContactComponent {
 			responsive: true,
 			data: [{
 				type: "column",
-			
-				indexLabel: "{} {y}",
+				indexLabel: "{y}",
 				dataPoints: countryarea.map(countryData => ({ label: countryData.country, y: countryData.landAreaKm })),
 			}]
 		};
 	}
 }
-/*	public data: Data[] = [];
 
-	constructor(private dataProvider: LoaderService) {}
-  
-	ngOnInit() {
-	  this.dataProvider.getRespose().subscribe((response) => {
-		this.data = (response as Data[]);
-	  })
-	}*/
 
